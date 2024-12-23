@@ -1,0 +1,154 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+}
+
+header .logo img {
+    width: 100px;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content Area */
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+    gap: 20px;
+}
+
+.text-content {
+    padding: 20px;
+}
+
+.text-content h1 {
+    font-size: 2em;
+}
+
+.text-content p {
+    font-size: 1.1em;
+}
+
+.image-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+footer .social-media a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer .social-media a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Small Screens (Up to 600px) */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav ul {
+        flex-direction: column;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    .text-content,
+    .image-content {
+        padding: 10px;
+    }
+
+    footer {
+        padding: 10px;
+    }
+}
+
+/* Medium Screens (601px to 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header nav ul {
+        flex-direction: row;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Large Screens (Above 1024px) */
+@media (min-width: 1025px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header nav ul {
+        flex-direction: row;
+    }
+
+    main {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Bonus: Add Transition Effects */
+img {
+    transition: transform 0.3s ease-in-out;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
